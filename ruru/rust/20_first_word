@@ -1,0 +1,39 @@
+//  Step 1: Write a function that takes a string of words separated by spaces 
+//  Step 2:  Returns the first word that it finds in that string.
+
+
+fn main()
+{
+    let mut s = String::from("Hello world");
+
+    let word = first_word(&s);
+
+    println!("{}",word);
+
+
+
+    s.clear();
+}
+
+
+fn first_word(s: &String) -> usize
+{
+    let bytes = s.as_bytes(); // We need to convert the string to bytes because we need to check if the value has a space. 
+    
+
+    // In the for loop, we sepcify a pattern that has i for the index in the tuple and &item for every single byte in the tuple.
+    // We write &item because we only need to borrow a copy of the item and after it's use, we can return it back. 
+    for (i, &item) in bytes.iter().enumerate() // Iter is a method that returns each element in a collection.
+    {                                           // Enumerate is a method that wraps the result of iter 
+                                                // and returns each element as a part of a tuple.
+                                                // The first element of the tuple returned is the index. 
+                                                // Because the enumerate method returns a tuple. In our next step,
+                                                // We can now use patterns to destructure that tuple. 
+        if item == b' ' { // 
+            return i;
+        }
+
+    }
+    s.len()
+    
+}

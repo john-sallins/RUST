@@ -1,0 +1,39 @@
+// A string slice is a reference to a part of a sstring and it looks like this.
+
+
+
+fn main()
+
+{
+    let s = String::from("Hello world");
+    let _s1 = &s[0..5];
+    let _s2 = &s[6..11];
+
+
+    println!("The first word is '{_s1}' and the second word is '{_s2}'.");
+
+
+}// A string slice is a reference to a part of a sstring and it looks like this.
+
+
+
+fn main()
+
+{
+    let s = String::from("Hello world");
+    let _s1 = &s[0..5];
+    let _s2 = &s[6..11];
+
+
+    println!("The first word is '{_s1}' and the second word is '{_s2}'.");
+
+
+
+    let len = s.len();
+
+    let slice = &s[3..len];
+
+    println!("{slice}");
+
+
+}

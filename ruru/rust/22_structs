@@ -1,0 +1,34 @@
+// Structs can hold multiple values.
+// In a struct, you have to name each piece of the data so we know what the values mean.
+// You don't have to rely on the order of the data.
+
+
+// Step 1: To define a struct, we first enter the keyword struct
+// Step 2: We name the struct
+// Step 3: Inside the struct, we define the names and the pieces of data. 
+struct user_account 
+{
+    //Name: type
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+
+}
+
+// Step 4: To use a struct 
+
+
+fn main()
+
+{
+    let mut user1 = user_account 
+    {
+        active: true,
+        username: String::from("John");
+        email: String::from("John_123@icloud.com");
+        sign_in_count: 1,
+    };
+
+    
+}

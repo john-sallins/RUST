@@ -1,0 +1,6 @@
+// using trait objects for values of different types.
+
+// vectors can only store elements of one type.
+
+// let's create a gui that iterates through a list of items.
+

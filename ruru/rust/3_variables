@@ -1,0 +1,37 @@
+fn main()
+{
+    /* 
+Length	Signed	Unsigned
+8-bit	i8	u8
+16-bit	i16	u16
+32-bit	i32	u32
+64-bit	i64	u64
+128-bit	i128	u128
+arch	isize	usize
+
+
+*/
+    let mut _x = 5;
+    _x = 10;
+
+    println!("The new value of x is {_x}"); 
+
+    const ALL: u32 = 32;// Constants should always be used with uppercase.
+
+    println!("The value is:  {ALL}");
+
+    // Shadowing
+
+    let _b = 10;
+    println!("The value is:  {_b}");
+
+    let _b = 20;
+    println!("The value is:  {_b}");
+
+
+    
+
+    
+
+
+}

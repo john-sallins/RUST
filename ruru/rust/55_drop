@@ -1,0 +1,12 @@
+// The 'drop' trait will deallocate space on the heap after it's use.
+
+// Very very important: The Drop trait is almost always used when implementing a smart pointer.
+// In some cases, the programmer must call code to free memory or resources every time they finish using an instance of those types. 
+
+
+// Examples include file handles, sockets, or locks. If they forget, the system might become overloaded and crash.
+
+// The Rust languague will automatically implement this piece of code. Whenever a value goes out of scope. 
+
+
+

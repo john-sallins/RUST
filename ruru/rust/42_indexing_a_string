@@ -1,0 +1,10 @@
+fn main()
+{
+    let hello = "Super wooper";
+
+    // THE CORRECT WAY TO INDEX A STRING.
+
+    let  _s = &hello[2..7];
+
+    println!("{_s}");
+}

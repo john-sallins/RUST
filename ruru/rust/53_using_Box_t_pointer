@@ -1,0 +1,25 @@
+// Using Box<T> to Point to Data on the Heap
+// The most basic smart pointer is the box.
+// Whose type is written as Box<T>
+// Box allows you to store data on the heap rather than the stack. 
+// What remains on the stack is a pointer to the heap data. 
+
+//use case scenarios of a box t pointer:
+//
+// 1. When you have a type whose size can’t 
+// be known at compile time and you want to use a value of that type in a context that requires an exact size
+// 2. When you have a large amount of data and you want to transfer ownership but ensure the data won’t be copied
+//  when you do so
+// 2.1. Basically, in this scenario you have huge amounts of data and you want to transfer owneership BUT you DO NOT 
+// want to ensure that the data won't be copied when you do so.
+// 2.2. To improve performance in this situation, we can store the large amount of data on the heap in a box. 
+
+
+// Using a Box<T> to store data on the heap.
+// Let's store an i32 value on the heap using a box
+fn main()
+{
+    let b = Box::new(5);
+    pritnln!("{}",b);
+
+}

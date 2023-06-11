@@ -1,0 +1,9 @@
+// In Rust. although there is memory safety. Sometimes, errors do occur in which memory is never cleaned up. 
+
+// 1. The Box<T> type has a known size and points to data allocated on the heap.
+// 2.  The Rc<T> type keeps track of the number of references to data on the heap so that data can have multiple owners.
+//0.    The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler is still showin an error.
+//0.1.  The most important use case senario of the RefCell<T>:
+//0.2. Sometimes during testing a coder will use the RefCell<T> to in place of another type to observe behaviour. 
+//0.3.  The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler is still showin an error.
+

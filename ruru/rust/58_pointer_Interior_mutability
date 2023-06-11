@@ -1,0 +1,20 @@
+//0.    The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler is still showin an error.
+//0.1.  The most important use case senario of the RefCell<T>:
+//0.2. Sometimes during testing a coder will use the RefCell<T> to in place of another type to observe behaviour. 
+//0.3.  The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler is still showin an error.
+// 1. Interior mutability is a design pattern in Rust that allows you to 
+//    mutate data even when there are immutable references to that data; 
+
+// 2. To mutate data, the pattern uses unsafe code inside a data 
+//    structure to bend Rust’s usual rules that govern mutation and borrowing. 
+
+//3. The RefCell<T> type that follows the interior mutability pattern.
+
+// 4. Generally if you break coding rules, you will get an error message.
+// 4.1. However, with RefCell<T> if you break rules, your program will panic and exit.
+
+// 5. Reasons to choose Box<T>, Rc<T>, or RefCell<T>:
+// 5.1. Rc<T> enables multiple owners of the same data;
+// 5.2. Box<T> and RefCell<T> have single owners.
+// 5.3.  The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler is still showin an error.
+

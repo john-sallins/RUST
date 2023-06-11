@@ -1,0 +1,18 @@
+// Many iterator methods take closure arguments, so keep these closure details in mind as we continue!
+
+// In rust, iteratators have no effect until you call methods that consume the iterator to use it up.
+
+// Iterators are faster than loops  
+
+fn main()
+{
+let v1 = vec![1, 2, 3];
+
+let v1_iter = v1.iter();
+for val in v1_iter {
+    println!("Got: {}", val);
+}
+}
+
+// Once we have created an iterator, we can use it in a variety of ways.
+

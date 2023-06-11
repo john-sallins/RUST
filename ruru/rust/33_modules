@@ -1,0 +1,17 @@
+//  declare a new module:
+//   mod::garden; 
+
+
+
+// code within a module is private by default.
+// To declare a module public, declare it with the 
+// pub mod
+
+
+
+use crate::garden::vegetables::Asparagus;
+
+pub mod garden;
+
+
+

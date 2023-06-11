@@ -1,0 +1,16 @@
+fn main()
+{
+    let _a = String::from("Hello");
+
+    println!("{}",takes_and_gives_back(_a));
+
+
+
+}
+
+fn takes_and_gives_back(this: String) -> String
+{
+    this
+
+
+}

@@ -1,0 +1,18 @@
+use std::thread;
+
+fn main() {
+    let v = vec![1, 2, 3];
+
+    let handle = thread::spawn(move || {
+        println!("Here's a vector: {:?}", v);
+    });
+
+    handle.join().unwrap();
+}
+
+// Continued from 62
+// By adding move before the closure, we force the closure to take ownership of the values
+// rather than allow rust that it should borrow the values. 
+
+// Rust's ownership rules have saved us again.
+// We got an error because Rust was using 

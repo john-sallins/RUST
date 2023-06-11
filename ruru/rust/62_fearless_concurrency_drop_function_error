@@ -1,0 +1,19 @@
+// the fearless concurrency drop function error
+
+// We will get an error in this function 
+// The reason is that the drop function in the main function will end before the spawn function.
+// Hence, the spawn function has to prematurely end before the main function. 
+
+use std::thread;
+
+fn main() {
+    let v = vec![1, 2, 3];
+
+    let handle = thread::spawn(|| {
+        println!("Here's a vector: {:?}", v);
+    });
+
+    drop(v); // oh no!
+
+    handle.join().unwrap();
+}

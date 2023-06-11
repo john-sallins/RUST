@@ -1,0 +1,28 @@
+fn main()
+
+
+// What are closures ?
+// Closures don't have names.
+// They can be passed as variables. 
+
+{
+    let _x = |x: i32, y: i32| -> i32
+    {
+        x + y
+    };
+    
+    let _c = _x(30, 50);
+    println!("{}",{_c});
+    // Closure number 2
+
+    let example_closure = |x| x;
+
+    let s = example_closure(String::from("hello"));
+
+
+    println!("{s}");
+    
+
+
+
+}

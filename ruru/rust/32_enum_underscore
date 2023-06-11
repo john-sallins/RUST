@@ -1,0 +1,26 @@
+fn main()
+{
+    let dice_roll = 9;
+    match dice_roll {
+        3 => three(),
+        7 => seven(),
+        _ => reroll(), // if the number is not a 3 or a 7.
+    }
+}
+
+fn three() 
+{
+    println!{"You win an I-phone!"};
+
+}
+
+fn seven()
+{
+    println!("You win a macbook!");
+}
+
+fn reroll()
+{
+    println!("Please try again.");
+}
+

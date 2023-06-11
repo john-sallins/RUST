@@ -1,0 +1,25 @@
+use std::io;// You have to use std io for string input. 
+
+fn main() {
+    let mut guess = String::new();
+
+    
+
+    println!("Enter your input");
+    // Receiving user input
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
+
+
+   
+
+    // Let's convert the guess variable to accept numerics
+    // we need to tell Rust the exact number type we want. (u32)
+    // the : after guess tells Rust that we'll annotate the variable's type.
+    
+     
+    // The parse method converts the the string into another type.
+    // The trim method will eliminate any white-space at the beginning and the end.
+    
+    println!(" Your guess is: {guess}");
+     
+}

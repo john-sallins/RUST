@@ -1,0 +1,41 @@
+// Shared-State Concurrency
+
+// Message passing is a fine way of handling concurrency, 
+// Another method would be for multiple threads to access the 
+// same shared data.
+
+// Shared memory concurrency is like multiple ownership: multiple 
+// threads can access the same memory location at the same time.
+
+// To do shared memory access, we need to use a mutex. 
+// A mutex allows only one thread to access some data at any given time.
+
+// THE BASIC RULE: A mutex allows only one thread to access some data at any given time.
+// A MUTEX CAN BE COMPARED TO A MICROPHONE AT A PANEL DISCUSSION.
+// Only one person can use the microphone at a given time.
+// And if the microphone is not passed, then no one else will get  to speak.
+
+// Step 1: use the mutex library
+// Step 2: create a mutex, using the new function.
+
+use std::sync::Mutex; // Step 1: use the mutex library
+fn main()
+{
+    let m = Mutex::new(5); // // Step 2: create a mutex, using the new function.
+    let mut num = m.lock().unwrap();// Step 3 In order to access the data inside the mutex, 
+    // we use the lock method to accquire the lock.
+    // This call will block the current thread so it 
+    //can’t do any work until it’s our turn to have the lock.
+    // The unwrap() function would panic if the function got stuck.
+    {
+        let mut num = m.lock().unwrap();
+        *num = 6;
+    }
+
+    println!("m = {:?}", m);
+
+    
+
+}
+
+

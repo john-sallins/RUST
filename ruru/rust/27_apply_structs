@@ -1,0 +1,30 @@
+// Let's take the width and the height of a rectangle specified in pixels and calculate the area of the rectangle.
+/*
+fn main()
+{
+    let width1 = 30;
+    let height1 = 50;
+
+    println!("The area of the rectangle is {}", area(width1, height1));
+}
+
+fn area(width: u32, height: u32) -> u32 
+{
+    width * height
+}
+
+*/
+
+// Version 2 with tuples 
+
+fn main()
+{
+    let rect1 = (30, 50);
+
+    println!("The area of the rectangle is: {}", area(rect1));
+}
+
+fn area(dimensions: (u32,u32)) -> u32
+{
+    dimesions.0 * dimensions.1
+}

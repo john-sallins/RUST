@@ -1,0 +1,49 @@
+// This is a dice roll game. 
+// If you roll a 3, then you win an i-phone
+// If you roll a 7, then you win a mac-book
+// If you roll any other number, then nothing happens.
+
+enum Dice {
+    One,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+}
+
+fn main()
+{
+    println!(" {}", value_in_cents(Dice::One));
+    println!(" {}", value_in_cents(Dice::Three));
+    
+
+}
+fn value_in_cents(dice: Dice) -> u8 {
+    match dice {
+        Dice::One => {
+            println!("You receive one point.");
+            1
+        }
+        Dice::Two => {
+            println!("You reeive two points.");
+            2
+        },
+        Dice::Three => {
+            println!("You receive three points.");
+            3
+        },
+        Dice::Four => {
+            println!("You receive four points.");
+            4
+        }
+        Dice::Five => {
+            println!("You receive five points.");
+            5
+        }
+        Dice::Six => {
+            println!("You receive six points.");
+            6
+        }
+    }
+}

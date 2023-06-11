@@ -1,0 +1,48 @@
+// Let's take a look with what we can do with threads. 
+
+// Using Message Passing to Transfer Data Between Threads
+// Step 1:
+// Let's create a new function using the mpsc channel function.
+// mpsc stands for multiple producers and a single consumer.
+// In Rust, a channel can have mutiple sending ends that produce values but only one receiving end that consumes them.
+// The mpsc channel function returns a tuple. 
+// In this tuple, the first element is the sender and the second end is the receiver.
+// In a traditional sense, a transitter is 'tx' and the receiver is the 'rx'
+// We are going to use a let statement to destructure the tuple.
+// In simple words, understand that the let statement is a simple way to extract pieces of the tuple returned by the mpsc channel.
+
+
+//Step 2:
+// Let's move the transmitting (tx) end into a spawn thread and have it send one string so 
+// the spawn thread is communicating with the main thread. 
+// This is similar to sending a tree log from one end of the stream to the other.
+// This is also similar to sending a chat message from one end to the other.
+
+
+// Step 3:
+// l. The transmitter has a send method that takes the value we want to send.
+// 2. The send method returns a Result<T, E> 
+// 3. So if the receiver has already dropped, the send operation will return an error.
+// 4. Unwrap will call panic incase of an error.
+// 5. We'll get the value receiver in the main thread.
+// 5.1 This is like retreving the wodden logs from the river.
+// 5.2. Receiving a chat message.
+
+
+
+
+
+use std::sync::mpsc;
+use std::thread;
+
+fn main() {
+    let (tx, rx) = mpsc::channel();
+
+    thread::spawn(move || {
+        let val = String::from("hi");
+        tx.send(val).unwrap(); // Unwrap will call panic incase of an error.
+    });
+
+    let received = rx.recv().unwrap(); // the main thread
+    println!("Got: {}", received);
+}

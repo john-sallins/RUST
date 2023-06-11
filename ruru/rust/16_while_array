@@ -1,0 +1,14 @@
+fn main()
+{
+    let a = [10,20,30,40,50,60,70];
+
+    let mut index = 0;
+
+    while index < 7
+    {
+        println!("The elements of the array are: {}",a[index]);
+
+        index += 1;
+
+    }
+}

@@ -1,0 +1,6 @@
+// One requirement for match expressions is that they need to be exhaustive 
+// in the sense that all possibilities for the value in the match expression must be accounted for.
+
+
+// '_' is used as the last arm in a match expression.
+

@@ -1,0 +1,15 @@
+// Vectors can store multiple values of the same type.
+
+// Step 1: Create a new vector
+// let's call the new vecotr Vector::new
+// Beware: Vec<T> can holdd any type. 
+// There are two ways to instantiate a vector.
+
+
+// Approach 1
+let v: Vec<i32> = Vec::new();
+
+// Approach 2
+let v = vec![1,2,3]; // i32 is the default type.
+
+

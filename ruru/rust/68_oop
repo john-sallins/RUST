@@ -1,0 +1,21 @@
+// OBJECTS CONTAIN DATA AND BEHAVIOUR THAT FUNCTIONS ON THAT DATA 
+
+// STRUCTS AND ENUMS ORGANIZE AND CONTAIN DATA.
+
+// IMPLEMENTATION BLOCKS CONTAIN METHODS ON STRUCTS AND ENUMS.
+
+// ENCAPSULATION IS A FEATURE OF OOP THROUGH WHICH WE HIDE THE IMPLEMENTATION DETAILS.
+
+// ENCAPSULATION: THE IMPLEMENTATION DEATILS OF AN OBJECT ARE NOT ACCESSIBLE THROUGH THAT CODE.
+
+// Therefore, the only way to interact with an object is through its public API;
+
+// by default every object in rust is private.
+
+// INHERITENCE: Inheritance is a mechanism whereby an object can inherit elements from another object’s definition, 
+// thus gaining the parent object’s data and behavior without you having to define them again.
+// RUST DOES NOT USE INHERITENCE
+
+
+
+

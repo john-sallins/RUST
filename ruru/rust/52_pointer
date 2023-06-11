@@ -1,0 +1,29 @@
+// The most common kind of pointer in Rust is a reference
+// References are indicated by the & symbol.
+
+// let a = 10 
+
+// &a 
+// What does this mean ?
+// Answer: This means let us borrow 'a' and return it back after it's use.
+// What is a smart pointer? 
+// While references borrow data, a smart pointer own the data that they point to.
+
+// Smart pointers are implemented using structs.
+// Smart pointers implement the Deref and Drop traits.
+// 1. The Deref trait allows an instance of the smart pointer struct to behave like a reference
+// 1.2. So that so you can write your code to work with either references or smart pointers.
+// 
+fn main()
+{
+    let mut a = 10;
+    
+    let b = 10 + &a;
+
+    println!("{b}");
+
+    // A reference counting smart pointer enables you to allow data to have multiple owners.
+
+
+    
+}

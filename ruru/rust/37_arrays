@@ -1,0 +1,37 @@
+// Vectors can store multiple values of the same type.
+
+// Step 1: Create a new vector
+// let's call the new vecotr Vector::new
+// Beware: Vec<T> can holdd any type. 
+// There are two ways to instantiate a vector.
+
+
+fn main()
+{
+
+// Approach 1
+let _c: Vec<i32> = Vec::new();
+
+// Approach 2
+let mut _v = vec![1,2,3]; // i32 is the default type.
+
+
+// update a vector
+
+_v.push(6);
+_v.push(5);
+
+// Reading elements of vecotrs
+
+let check = &_v[3];
+println!("{check}");
+
+// Null-match expression
+
+let awesome = &_v.get(2);
+match awesome 
+{ 
+    Some(awesome) => println!("The third element is {awesome}"),
+    None => println!("There is no print line. "),
+}
+}

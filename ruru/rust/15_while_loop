@@ -1,0 +1,11 @@
+fn main()
+{
+    let mut _x = 10;
+    
+    while _x != 0
+    {
+        println!("It is a number {_x}");
+        _x -= 1;
+    }
+    println!("Liftoff");
+}

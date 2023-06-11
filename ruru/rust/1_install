@@ -1,0 +1,23 @@
+Step 1: 
+
+cargo new jesus_christ
+
+Step 2:
+
+cd jesus_christ
+
+Step 3:
+
+cargo build 
+
+Step 4:
+
+cargo run 
+
+
+--------------------------------------------
+
+1) Why use rust ? 
+
+Rust is a systems languague.
+

@@ -1,0 +1,29 @@
+// What is  string ?
+// strings are implemented as a collection of bytes
+
+// When Rustaceans refer to “strings” in Rust, they might be referring to either the String or the string slice &str types,
+
+
+
+fn main(){
+
+    let mut s1 = String::from("lo");
+    s1.push('l');
+    println!("{}",s1);
+    let data = "Super concepts.";
+    
+    let s = data.to_string();
+    
+    println!("{s}");
+    
+    
+    // Updating a string
+    
+    
+    let s2 = "bar";
+    s1.push_str(s2);
+    println!("s2 is {s2}");
+    
+    
+    
+    }

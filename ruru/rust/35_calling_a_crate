@@ -1,0 +1,22 @@
+// Beare: If you want to make an item like a function or struct private, you put it in a module.
+
+
+
+
+// Beware: by addong pub in front of front of house DOES NOT MAKE THE HOSTING MODULE PUBLIC. 
+// WE HAVE TO MODIFY THE MPDULE AND AKE IT PUBLIC.
+
+// If we use pub before a struct definition, we make the struct public, but the struct’s fields will still be private.
+mod front_of_house {
+    mod pub hosting {
+        fn add_to_waitlist() {}
+    }
+}
+
+pub fn eat_at_restaurant() {
+    // Absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
+
+    // Relative path
+    front_of_house::hosting::add_to_waitlist();
+}

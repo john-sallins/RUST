@@ -1,0 +1,9 @@
+// Rust has very few oncurrency features.
+
+// There are two concurrency concepts that are embedded into the languague: 
+// These two concepts are embedded in the std::marker -> sync and send
+
+
+// Send can be transferred between threads. 
+// Almost every Rust type is send. Except for  Rc<T> 
+// 

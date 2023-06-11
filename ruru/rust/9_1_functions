@@ -1,0 +1,13 @@
+fn main()
+{
+    let _A = String::from("Hello");
+    ownership(_A);
+
+}
+
+
+fn ownership(Somestring: String)
+{
+    println!("{}",Somestring);
+
+}

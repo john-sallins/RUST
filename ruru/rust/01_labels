@@ -1,0 +1,7 @@
+fn main()
+{
+    'awesome: loop // Awesome is a loop label
+    {
+        println!("Hello");
+    }
+}

@@ -1,0 +1,58 @@
+// Let's create a function that returns the user struct.
+
+
+
+
+
+
+
+
+
+struct user_account 
+{
+    //Name: type
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+
+}
+
+// Step 4: To use a struct 
+
+
+fn main()
+
+{
+    let mut user1 = user_account 
+    {
+        active: true,
+        username: String::from("John");
+        email: String::from("John_123@icloud.com");
+        sign_in_count: 1,
+    };
+
+
+    let user2 = user_account
+    {
+        email: String::from("aditya@gmail.com");
+        ..user1
+    };
+
+    // Enter email id  and your user name into the function. 
+    build_user(email: String, username: String) -> user_account
+    {
+        // We have to use the same name for the init shorthand
+        user_account 
+        {
+            active: true,
+            username, // init // We do not need to write username:username
+            email, // init // we do not need to write email:email
+            sign_in_count: 1,
+
+        }
+
+
+    }
+    
+}
